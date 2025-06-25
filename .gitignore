@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+node_modules
 /.pnp
 .pnp.js
 .yarn/install-state.gz
@@ -34,3 +34,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore Next.js build output
+.next/
+
+# Ignore node_modules
+node_modules/
+
+# Ignore output zip files
+out.zip
+*.zip
+
+# Ignore large webpack cache files (over 50MB)
+.next/cache/webpack/*.pack
+
+# Ignore any file over 50MB (manual pattern, not enforced by git, but helps as a reminder)
+# Use git-lfs or avoid adding large files
+# See: https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github
