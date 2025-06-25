@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const siteConfig: Metadata = {
-  title: "V-Accell | AI Dynamics",
-  description: "Welcome to my to AI company portfolio",
+  title: "V-Accel | AI Dynamics",
+  description: "Welcome to our to AI company portfolio",
   keywords: [
     "reactjs",
     "nextjs",

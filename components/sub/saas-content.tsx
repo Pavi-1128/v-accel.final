@@ -10,38 +10,39 @@ import {
   slideInFromRight,
   slideInFromTop,
 } from "@/lib/motion";
- const stacks = [
+
+const stacks = [
   {
-    title: 'Machine Learning',
-    items: ['TensorFlow', 'PyTorch', 'Scikit-learn'],
+    title: 'Frontend',
+    items: ['React.js', 'Next.js', 'TailwindCSS'],
   },
   {
-    title: 'Deep Learning',
-    items: ['Neural Networks', 'CNN', 'RNN'],
+    title: 'Backend',
+    items: ['Node.js', 'Express.js', 'NestJS'],
   },
   {
-    title: 'NLP',
-    items: ['BERT', 'GPT', 'Transformers'],
+    title: 'Database',
+    items: ['MongoDB', 'PostgreSQL', 'MySQL'],
   },
   {
-    title: 'Computer Vision',
-    items: ['OpenCV', 'YOLO', 'ResNet'],
+    title: 'Authentication',
+    items: ['JWT', 'OAuth2', 'SSO'],
   },
   {
-    title: 'Data Processing',
-    items: ['Pandas', 'NumPy', 'Spark'],
+    title: 'Payment',
+    items: ['Stripe', 'PayPal', 'Square'],
   },
   {
-    title: 'Cloud AI',
-    items: ['AWS SageMaker', 'Azure ML', 'GCP AI'],
+    title: 'Cloud',
+    items: ['AWS', 'Azure', 'GCP'],
   },
   {
-    title: 'Model Deployment',
-    items: ['Docker', 'Kubernetes', 'MLflow'],
+    title: 'Analytics',
+    items: ['Mixpanel', 'Amplitude', 'GA4'],
   },
   {
-    title: 'AI Frameworks',
-    items: ['ONNX', 'TensorRT', 'OpenVINO'],
+    title: 'DevOps',
+    items: ['Docker', 'Kubernetes', 'CI/CD'],
   },
 ];
 
@@ -58,8 +59,8 @@ const cardVariants = {
   }),
 };
 
-export const AiContent = () => {
-  return (
+export const SaasContent = () => {
+return (
     <motion.div
       initial="hidden"
       animate="visible"
@@ -73,9 +74,9 @@ export const AiContent = () => {
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white"
         >
           <span>
-             AI & ML{" "}
+             SaaS Product{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 inline-block">
-             Solutions
+              Development
             </span>
           </span>
         </motion.div>
@@ -92,16 +93,16 @@ export const AiContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-base sm:text-lg text-gray-400 font-semibold max-w-[600px] mx-auto lg:mx-0"
         >
-         Transform Your Business: Harness the Power of AI and Machine Learning.
+          Transform Your Business: Build Scalable SaaS Solutions That Drive Growth.
         </motion.p>
 
         <motion.p
           variants={slideInFromLeft(0.8)}
           className="text-base sm:text-lg text-gray-400 max-w-[600px] mx-auto lg:mx-0"
         >
-          Innovate with{" "}
+           Launch with{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 font-semibold">
-             Intelligence
+            Speed
           </span>.
         </motion.p>
 
@@ -109,19 +110,19 @@ export const AiContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-base sm:text-lg text-gray-400 max-w-[600px] mx-auto lg:mx-0"
         >
-         Automate with{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 font-semibold">
-           Precision
-          </span>.
-        </motion.p>
-
-        <motion.p
-          variants={slideInFromLeft(0.8)}
-          className="text-base sm:text-lg text-gray-400 max-w-[600px] mx-auto lg:mx-0"
-        >
-         Scale with{" "}
+          Scale with{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 font-semibold">
             Confidence
+          </span>.
+        </motion.p>
+
+        <motion.p
+          variants={slideInFromLeft(0.8)}
+          className="text-base sm:text-lg text-gray-400 max-w-[600px] mx-auto lg:mx-0"
+        >
+          Grow with{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 font-semibold">
+            Innovation
           </span>.
         </motion.p>
       </div>
