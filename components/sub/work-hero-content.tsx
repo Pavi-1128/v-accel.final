@@ -48,7 +48,7 @@ export const WorkHeroContent = () => {
       <div className="h-full w-full lg:w-1/2 flex flex-col gap-4 sm:gap-6 lg:gap-7 min-[2560px]:gap-10 justify-center text-center lg:text-start lg:mr-8 lg:mr-15 min-[2560px]:mr-20">
         
         {/* Main Heading */}
-        <motion.div
+        {/* <motion.div
           variants={slideInFromLeft(0.5)}
           className="flex flex-col gap-4 sm:gap-6 lg:gap-7 min-[2560px]:gap-10 mt-4 sm:mt-8 md:mt-15 md:pt-20 min-[2560px]:pt-32
                      text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl min-[2560px]:text-8xl
@@ -65,7 +65,27 @@ export const WorkHeroContent = () => {
             </span>{" "}
             stories for your business
           </span>
-        </motion.div>
+        </motion.div> */}
+        
+<motion.div
+  variants={slideInFromLeft(0.5)}
+  className="flex flex-col gap-4 sm:gap-6 lg:gap-7 min-[2560px]:gap-10
+             mt-20 sm:mt-8 md:mt-15 md:pt-20 min-[2560px]:pt-32
+             text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl min-[2560px]:text-8xl
+             font-bold text-white 
+             max-w-full md:max-w-[600px] min-[2560px]:max-w-[1000px] 
+             leading-tight min-[2560px]:leading-[1.1]"
+>
+  <span className="break-words">
+    Building{" "}
+    <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 
+                     inline-block min-w-[140px] sm:min-w-[180px] lg:min-w-[220px] min-[2560px]:min-w-[350px] 
+                     leading-[1.15] min-[2560px]:leading-[1.1]">
+      digital success
+    </span>{" "}
+    stories for your business
+  </span>
+</motion.div>
 
         {/* Description Points */}
         <div className="flex flex-col gap-3 sm:gap-4 min-[2560px]:gap-6">

@@ -35,7 +35,7 @@ export const ServiceSection: React.FC<ServiceSectionProps> = ({
   points,
 }) => (
   <section className="relative min-h-auto flex items-start bg-red w-full 
-                     px-4 min-[2560px]:px-8 
+                     px-0 min-[2560px]:px-8 
                      py-8 min-[2560px]:py-16 
                      z-10">
     <div className="relative mt-20 min-[2560px]:mt-32 
@@ -50,7 +50,7 @@ export const ServiceSection: React.FC<ServiceSectionProps> = ({
       {/* Background image with proper z-index control */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="w-full h-full opacity-20 lg:group-hover:opacity-100 transition-opacity duration-700 ease-in-out">
-          {image && (
+          {/* {image && (
             <motion.img
               src={image}
               alt={title}
@@ -62,19 +62,19 @@ export const ServiceSection: React.FC<ServiceSectionProps> = ({
               }}
               className="absolute inset-0 w-full h-full object-cover"
             />
-          )}
+          )} */}
           {/* Overlay gradients - only on larger screens */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-gray-900/60 to-black/40 
+          {/* <div className="absolute inset-0 bg-gradient-to-br  from-black/20 via-gray-900/60 to-black/40 
                           hidden xl:block
                           group-hover:from-black/10 group-hover:via-gray-900/40 group-hover:to-black/20
-                          transition-all duration-700 ease-in-out" />
+                          transition-all duration-700 ease-in-out" /> */}
           {/* Content background overlay - only on larger screens */}
-          <div className="absolute inset-4 xl:inset-14 min-[2560px]:inset-20 
+           {/* <div className="absolute inset-4 xl:inset-14 min-[2560px]:inset-20 
                           bg-gray-900/85 backdrop-blur-sm 
                           rounded-2xl min-[2560px]:rounded-3xl 
                           border border-white/10 hidden xl:block
                           group-hover:bg-gray-900/70 group-hover:border-white/20
-                          transition-all duration-700 ease-in-out" />
+                          transition-all duration-700 ease-in-out" />  */}
         </div>
       </div>
 

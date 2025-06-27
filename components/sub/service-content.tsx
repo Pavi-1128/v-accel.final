@@ -41,7 +41,7 @@ export const ServiceContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col-reverse md:flex-row items-center justify-center 
+      className="flex flex-col-reverse md:flex-row 
                  px-4 sm:px-8 lg:px-20 min-[2560px]:px-64
                  mt-20 md:mt-40 min-[2560px]:mt-64
                  w-full z-[20] gap-8 md:gap-0 min-[2560px]:gap-16
