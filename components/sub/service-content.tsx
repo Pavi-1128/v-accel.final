@@ -11,7 +11,7 @@ import {
   slideInFromRight,
   slideInFromTop,
 } from "@/lib/motion";
-import ContactPopup from "@/components/main/contactpopup";
+import ContactPopup from "@/components/main/ContactPopup";
 
 export const ServiceContent = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);

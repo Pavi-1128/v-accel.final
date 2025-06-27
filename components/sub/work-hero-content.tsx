@@ -8,7 +8,7 @@ import {
   slideInFromRight,
 } from "@/lib/motion";
 import { useState, useEffect } from "react";
-import ContactPopup from "@/components/main/contactpopup";
+import ContactPopup from "@/components/main/ContactPopup";
 
 export const WorkHeroContent = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
