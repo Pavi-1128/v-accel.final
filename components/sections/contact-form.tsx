@@ -459,7 +459,7 @@ export const ContactForm: React.FC = () => {
               variants={floatingTextVariants}
               initial="hidden"
               animate={isHeadingInView ? 'visible' : 'hidden'}
-              className="text-2xl sm:text-3xl md:text-4xl min-[2560px]:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500"
+              className="text-4xl sm:text-3xl md:text-4xl min-[2560px]:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500"
               whileInView={floatingAnimation}
             >
               Let&apos;s Build Something Amazing
@@ -474,46 +474,7 @@ export const ContactForm: React.FC = () => {
             >
               Your Vision, Our Expertise
             </motion.div>
-            {/* <motion.div
-              custom={2}
-              variants={floatingTextVariants}
-              initial="hidden"
-              animate={isHeadingInView ? 'visible' : 'hidden'}
-              className="text-base sm:text-lg md:text-xl min-[2560px]:text-3xl text-white/60"
-              whileInView={floatingAnimation}
-            >
-              Transform Your Ideas Into Reality
-            </motion.div>
-            <motion.div
-              custom={3}
-              variants={floatingTextVariants}
-              initial="hidden"
-              animate={isHeadingInView ? 'visible' : 'hidden'}
-              className="text-sm sm:text-base md:text-lg min-[2560px]:text-2xl text-white/50 italic"
-              whileInView={floatingAnimation}
-            >
-              Innovation Meets Excellence
-            </motion.div>
-            <motion.div
-              custom={4}
-              variants={floatingTextVariants}
-              initial="hidden"
-              animate={isHeadingInView ? 'visible' : 'hidden'}
-              className="text-base sm:text-lg md:text-xl min-[2560px]:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500"
-              whileInView={floatingAnimation}
-            >
-              Crafting Digital Experiences
-            </motion.div>
-            <motion.div
-              custom={5}
-              variants={floatingTextVariants}
-              initial="hidden"
-              animate={isHeadingInView ? 'visible' : 'hidden'}
-              className="text-sm sm:text-base md:text-lg min-[2560px]:text-2xl text-white/40"
-              whileInView={floatingAnimation}
-            >
-              Where Technology Meets Creativity
-            </motion.div> */}
+      
             <motion.div
               custom={6}
               variants={floatingTextVariants}

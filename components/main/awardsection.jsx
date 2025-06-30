@@ -102,7 +102,7 @@ export const AwardSection = () => {
       </motion.div>
 
       {/* Our Mission Section */}
-      <motion.div
+      {/* <motion.div
         className="flex flex-col items-center text-center w-full mb-16"
         variants={fadeUp}
         custom={0.4}
@@ -121,7 +121,7 @@ export const AwardSection = () => {
         >
           To furnish groundbreaking, customized software solutions that surpass expectations, propelling our clients towards unparalleled success. We remain at the forefront of industry trends and standards, ensuring our clients maintain a competitive edge in their respective markets.
         </motion.p>
-      </motion.div>
+      </motion.div> */}
 
       {/* Achievement Cards */}
       <motion.div

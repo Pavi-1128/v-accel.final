@@ -466,7 +466,7 @@ export default function WhyChooseVAccel() {
         viewport={{ once: true, amount: 0.4 }} // 👈 animation only starts when 40% of the div is in view
         className="flex flex-col gap-6 sm:gap-8 lg:gap-10 w-full lg:w-[60%] max-w-full"
       >
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-black leading-tight">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-black leading-tight">
           <span className="whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
             Why V-Accel?
           </span>

@@ -12,7 +12,7 @@ export const Footer = () => {
               key={column.title}
               className="w-full sm:w-[200px] flex flex-col items-center sm:items-start min-[2560px]:w-[280px]"
             >
-              <h3 className="font-bold text-base sm:text-lg mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 min-[2560px]:text-2xl min-[2560px]:mb-6">
+              <h3 className="font-bold text-3xl sm:text-2xl mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 min-[2560px]:text-2xl min-[2560px]:mb-6">
                 {column.title}
               </h3>
               {column.data.map(({ icon: Icon, name, link = '#' }) => (

@@ -1,3 +1,4 @@
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -30,11 +31,11 @@ const fadeUp = {
 
 export const Projects = () => {
   return (
-    <>
+    <div className="-mt-20 sm:mt-0">
       {/* Heading */}
       <motion.div
         variants={slideInFromLeft(0.5)}
-        className="mt-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white text-center"
+        className="mb-5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white text-center"
       >
         Our{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
@@ -57,7 +58,7 @@ export const Projects = () => {
       {/* Main Section */}
       <section
         id="projects"
-        className="flex flex-col lg:flex-row lg:gap-6 items-center justify-center px-4 sm:px-6 lg:px-12 xl:px-16 -mt-10"
+        className="flex flex-col lg:flex-row lg:gap-6 items-center justify-center px-4 sm:px-6 lg:px-12 xl:px-16"
       >
         {/* Left Image */}
         <motion.div
@@ -107,6 +108,6 @@ export const Projects = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };

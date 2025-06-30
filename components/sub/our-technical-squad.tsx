@@ -105,7 +105,8 @@ const Team: React.FC = () => {
   ];
 
   return (
-    <section id="team" className="text-white py-10 px-4 sm:px-8 lg:px-20">
+    
+     <section id="team" className="text-white -mt-20 px-4 sm:px-8 lg:px-20 pb-10">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-base lg:text-6xl  font-bold">
