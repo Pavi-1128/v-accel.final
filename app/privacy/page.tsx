@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen text-white pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    <main className="w-full overflow-x-hidden text-white pt-32 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-cyan-500">Privacy Policy</h1>
         <p className="text-gray-400 mb-8">Effective Date: May 22, 2025</p> 
@@ -126,7 +126,7 @@ const PrivacyPolicy = () => {
           </section>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

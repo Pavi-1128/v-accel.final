@@ -3,9 +3,7 @@ import { HomePageWorkSection } from "../sub/homepage-section";
 
 export const HomePage = () => {
   return (
-    <div className="relative flex flex-col h-full w-full">
-   
-
+    <div className="relative flex flex-col w-full">
       <HomePageWorkSection />
     </div>
   );

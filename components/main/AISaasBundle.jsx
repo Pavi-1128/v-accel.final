@@ -322,7 +322,7 @@ const AISaasBundle = () => {
     }, [categoryKeys]);
 
     return (
-        <div className="min-h-screen ">
+        <div className="w-full">
             <section className="py-12 px-4 w-full max-w-none mx-auto mt-20 md:mt-32 lg:mt-40">
                 <motion.h1
                     initial="hidden"

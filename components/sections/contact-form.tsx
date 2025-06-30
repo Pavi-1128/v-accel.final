@@ -248,7 +248,7 @@ export const ContactForm: React.FC = () => {
 };
 
   return (
-    <div className="flex flex-col mx-10 min-[2560px]:mx-20 items-center justify-start gap-20 min-[2560px]:gap-32 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 min-[2560px]:px-48 pb-20 md:pb-40 min-[2560px]:pb-60 relative pt-20 md:pt-40 min-[2560px]:pt-60">
+    <div className="flex flex-col mx-10 min-[2560px]:mx-20 items-center justify-start gap-20 min-[2560px]:gap-32 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 min-[2560px]:px-48 pb-20 md:pb-40 min-[2560px]:pb-60 relative pt-20 md:pt-40 min-[2560px]:pt-60 w-full">
       {/* Toast Notification */}
           {toastMessage && (
         <motion.div

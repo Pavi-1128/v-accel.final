@@ -3,7 +3,7 @@ import { FOOTER_DATA } from "@/constants";
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-transparent text-gray-200 shadow-lg px-4 py-6 sm:py-8 md:py-10 min-[2560px]:px-32 min-[2560px]:py-16">
+    <footer className="w-full bg-[#0d011a] text-white border-t border-[#2d2d3a] shadow-lg px-4 py-6 sm:py-8 md:py-10 min-[2560px]:px-32 min-[2560px]:py-16 z-20 relative">
       <div className="max-w-7xl mx-auto flex flex-col items-center min-[2560px]:max-w-[2400px]">
         {/* Footer Columns */}
         <div className="w-full flex flex-col sm:flex-row sm:flex-wrap sm:justify-around items-center sm:items-start gap-6 sm:gap-10 mb-8 min-[2560px]:gap-16 min-[2560px]:mb-12">
