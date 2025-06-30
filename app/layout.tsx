@@ -4,11 +4,7 @@ import type { PropsWithChildren } from "react";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 
-import { Footer } from "@/components/main/footer";
-import { Navbar } from "@/components/main/navbar";
 import { siteConfig } from "@/config";
-import { cn } from "@/lib/utils";
-
 import "./globals.css";
 
 const inter = Inter({ 
@@ -44,6 +40,8 @@ export const metadata: Metadata = {
   }
 };
 
+import ClientLayout from "@/components/main/ClientLayout";
+
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
@@ -54,27 +52,8 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body
-        className={cn(
-          "bg-[#030014] overflow-y-auto overflow-x-hidden",
-          inter.className
-        )}
-      >
-        <Suspense fallback={null}>
-          <StarsCanvas />
-        </Suspense>
-        
-        <Navbar />
-        
-        <main className="lg:ml-64 min-[2560px]:lg:ml-80">
-          {children}
-        </main>
-        
-        <Footer />
-        
-        <Suspense fallback={null}>
-          <WhatsAppLogo />
-        </Suspense>
+      <body className={inter.className}>
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );
