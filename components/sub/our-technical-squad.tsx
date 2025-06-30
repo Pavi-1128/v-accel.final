@@ -105,8 +105,8 @@ const Team: React.FC = () => {
   ];
 
   return (
-    
-     <section id="team" className="text-white -mt-20 px-4 sm:px-8 lg:px-20 pb-10">
+
+    <section id="team" className="text-white -mt-20 px-4 sm:px-8 lg:px-20 pb-10">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-base lg:text-6xl  font-bold">
@@ -166,20 +166,21 @@ const Team: React.FC = () => {
         <section className="mt-20">
           <div className="flex flex-col lg:flex-row gap-12">
             <motion.div
-  variants={slideInFromLeft(0.5)}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}
-  className="flex-1 flex items-center justify-center text-center 
+              variants={slideInFromLeft(0.5)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="flex-1 flex items-center justify-center text-center 
              sm:justify-start sm:text-left"
->
-  <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white">
-    Our Capabilities
-    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-      Fueled by the Leadership of Our CEO
-    </span>
-  </h2>
-</motion.div>
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white">
+                Our Capabilities
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+                  Fueled by the Leadership of Our CEO
+                </span>
+              </h2>
+            </motion.div>
+
 
 
             <motion.div
@@ -193,7 +194,15 @@ const Team: React.FC = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpItem}
-                  className="flex gap-4 text-white p-6 rounded-xl shadow-md border border-[#2A2A3C]"
+                  whileHover={{
+                    scale: 1.05,
+                    transition: {
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 10,
+                    },
+                  }}
+                  className="flex gap-4 text-white p-6 rounded-xl shadow-md border border-[#2A2A3C] cursor-pointer"
                 >
                   <BsDot className="text-purple-500 text-4xl" />
                   <div>
@@ -203,6 +212,7 @@ const Team: React.FC = () => {
                 </motion.div>
               ))}
             </motion.div>
+
           </div>
         </section>
 

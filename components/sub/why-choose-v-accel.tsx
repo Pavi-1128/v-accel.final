@@ -21,15 +21,15 @@ function getRandomParticleStyle(): React.CSSProperties {
     };
 }
 const fadeUpVariant = {
-  hidden: { opacity: 0, y: 80 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: 'easeOut',
+    hidden: { opacity: 0, y: 80 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.8,
+            ease: 'easeOut',
+        },
     },
-  },
 };
 
 
@@ -42,18 +42,18 @@ const whatWeDoCards = [
     {
         title: 'Custom Software Development',
         points: [
-      'Frontend','Backend','Mobile Apps','APIs','Database','Cloud','Authentication','Hosting'
-    ],
+            'Frontend', 'Backend', 'Mobile Apps', 'APIs', 'Database', 'Cloud', 'Authentication', 'Hosting'
+        ],
         icon: '💻',
         border: 'border-purple-500/30',
         shadow: 'hover:shadow-purple-500/25'
     },
-    
+
     {
         title: 'DevOps & Cloud Engineering',
-          points: [
-      'CI/CD','Containerization','Infrastructure as Code','Monitoring','Cloud Platforms','Serverless','Security'
-    ],
+        points: [
+            'CI/CD', 'Containerization', 'Infrastructure as Code', 'Monitoring', 'Cloud Platforms', 'Serverless', 'Security'
+        ],
         icon: '📊',
         border: 'border-orange-500/30',
         shadow: 'hover:shadow-orange-500/25'
@@ -61,17 +61,17 @@ const whatWeDoCards = [
     {
         title: 'SaaS Product Development',
         points: [
-      'Web Framework','Billing & Payments','Authentication/SSO','Backend APIs','Database','Multi-Tenancy','Deployment/Hosting','Storage & CDN',
-    ],
+            'Web Framework', 'Billing & Payments', 'Authentication/SSO', 'Backend APIs', 'Database', 'Multi-Tenancy', 'Deployment/Hosting', 'Storage & CDN',
+        ],
         icon: '🌐',
         border: 'border-cyan-500/30',
         shadow: 'hover:shadow-cyan-500/25'
     },
     {
         title: 'AI & ML Engineering',
-       points: [
-      'LLMs & Generative AI','Fine-Tuning Models','AI Development','Vector Databases','Computer Vision','NLP','MLOps','AI Infrastructure',
-    ],
+        points: [
+            'LLMs & Generative AI', 'Fine-Tuning Models', 'AI Development', 'Vector Databases', 'Computer Vision', 'NLP', 'MLOps', 'AI Infrastructure',
+        ],
         icon: '🤖',
         border: 'border-emerald-500/30',
         shadow: 'hover:shadow-emerald-500/25'
@@ -87,7 +87,7 @@ const highlights = [
         shadow: "hover:shadow-purple-500/25"
     },
     {
-        title: "Zero Template Policy", 
+        title: "Zero Template Policy",
         description: "Every module is crafted ground-up, no generic kits.",
         icon: "🛡️",
         border: "border-cyan-500/30",
@@ -96,7 +96,7 @@ const highlights = [
     {
         title: "Experience-Driven Design",
         description: "Built around user behavior, not developer convenience.",
-        icon: "🪄", 
+        icon: "🪄",
         border: "border-emerald-500/30",
         shadow: "hover:shadow-emerald-500/25"
     },
@@ -123,7 +123,7 @@ const timelineData: TimelineItemType[] = [
     {
         id: 'decode',
         title: 'Decode',
-        description: 'We deep-dive into your business logic, users, and industry', 
+        description: 'We deep-dive into your business logic, users, and industry',
         icon: <Search className="text-white" />,
         category: 'primary',
         details: [
@@ -166,7 +166,7 @@ const timelineData: TimelineItemType[] = [
         icon: <Zap className="text-white" />,
         category: 'secondary',
         details: [
-            'Performance testing', 
+            'Performance testing',
             'Quality assurance',
             'User testing',
             'Optimization'
@@ -218,15 +218,15 @@ const TimelineNode: React.FC<TimelineNodeProps> = ({ item, index }) => {
                 className={`relative z-10 w-full sm:w-3/5 md:w-1/2 mb-16 min-[2560px]:mb-24 ${isEven ? 'mr-auto pr-4 sm:pr-8 min-[2560px]:pr-16' : 'ml-auto pl-4 sm:pl-8 min-[2560px]:pl-16'}`}
                 initial={{ opacity: 0, x: isEven ? -100 : 100, scale: 0.8 }}
                 animate={isInView ? { opacity: 1, x: 0, scale: 1 } : { opacity: 0, x: isEven ? -100 : 100, scale: 0.8 }}
-                transition={{ 
-                    duration: 0.8, 
+                transition={{
+                    duration: 0.8,
                     delay: index * 0.15,
                     type: "spring",
                     stiffness: 100,
                     damping: 15
                 }}
-                whileHover={{ 
-                    scale: 1.05, 
+                whileHover={{
+                    scale: 1.05,
                     y: -5,
                     transition: { duration: 0.2 }
                 }}
@@ -235,46 +235,45 @@ const TimelineNode: React.FC<TimelineNodeProps> = ({ item, index }) => {
                     className={`absolute top-1/3 ${isEven ? 'right-0 translate-x-1/2' : 'left-0 -translate-x-1/2'} w-5 h-5 min-[2560px]:w-8 min-[2560px]:h-8 rounded-full border-4 border-white bg-gradient-to-r from-purple-500 to-cyan-500 z-20`}
                     initial={{ scale: 0, rotate: 0 }}
                     animate={isInView ? { scale: 1, rotate: 360 } : { scale: 0, rotate: 0 }}
-                    transition={{ 
-                        type: 'spring', 
-                        stiffness: 400, 
-                        delay: index * 0.15 + 0.3, 
+                    transition={{
+                        type: 'spring',
+                        stiffness: 400,
+                        delay: index * 0.15 + 0.3,
                         duration: 0.6
                     }}
-                    whileHover={{ 
-                        scale: 1.3, 
+                    whileHover={{
+                        scale: 1.3,
                         boxShadow: "0 0 20px rgba(139, 92, 246, 0.6)",
                         transition: { duration: 0.2 }
                     }}
                 />
 
                 <motion.div
-                    className={`rounded-xl overflow-hidden min-[2560px]:rounded-2xl ${
-                        item.category === 'primary'
+                    className={`rounded-xl overflow-hidden min-[2560px]:rounded-2xl ${item.category === 'primary'
                             ? 'bg-gradient-to-br from-purple-900/80 to-indigo-900/80 border border-purple-500/30'
                             : 'bg-gradient-to-br from-cyan-900/80 to-blue-900/80 border border-cyan-500/30'
-                    } backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300`}
+                        } backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300`}
                     whileHover={{
                         borderColor: item.category === 'primary' ? 'rgba(168, 85, 247, 0.6)' : 'rgba(6, 182, 212, 0.6)',
-                        boxShadow: item.category === 'primary' 
-                            ? '0 25px 50px -12px rgba(168, 85, 247, 0.25)' 
+                        boxShadow: item.category === 'primary'
+                            ? '0 25px 50px -12px rgba(168, 85, 247, 0.25)'
                             : '0 25px 50px -12px rgba(6, 182, 212, 0.25)',
                         transition: { duration: 0.3 }
                     }}
                     layout
                 >
                     <div className="p-6 min-[2560px]:p-10">
-                        <motion.div 
+                        <motion.div
                             className="text-4xl min-[2560px]:text-6xl mb-4 min-[2560px]:mb-6 text-white"
-                            whileHover={{ 
-                                scale: 1.2, 
+                            whileHover={{
+                                scale: 1.2,
                                 rotate: 10,
                                 transition: { duration: 0.2 }
                             }}
                         >
                             {item.icon}
                         </motion.div>
-                        <motion.h3 
+                        <motion.h3
                             className="text-xl min-[2560px]:text-3xl font-bold mb-3 min-[2560px]:mb-5 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300"
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -282,7 +281,7 @@ const TimelineNode: React.FC<TimelineNodeProps> = ({ item, index }) => {
                         >
                             {item.title}
                         </motion.h3>
-                        <motion.p 
+                        <motion.p
                             className="text-white/80 text-sm min-[2560px]:text-lg leading-relaxed mb-4 min-[2560px]:mb-6"
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -291,14 +290,14 @@ const TimelineNode: React.FC<TimelineNodeProps> = ({ item, index }) => {
                             {item.description}
                         </motion.p>
                         {item.details && (
-                            <motion.ul 
+                            <motion.ul
                                 className="list-disc list-inside text-white/70 text-sm min-[2560px]:text-base space-y-1 min-[2560px]:space-y-2 pl-2 min-[2560px]:pl-4"
                                 initial={{ opacity: 0, height: 0 }}
                                 animate={isInView ? { opacity: 1, height: 'auto' } : { opacity: 0, height: 0 }}
                                 transition={{ delay: index * 0.15 + 0.7, duration: 0.5 }}
                             >
                                 {item.details.map((detail, idx) => (
-                                    <motion.li 
+                                    <motion.li
                                         key={idx}
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
@@ -364,29 +363,29 @@ export default function WhyChooseVAccel() {
 
     const slideInFromLeft = (delay: number) => ({
         hidden: { x: -100, opacity: 0 },
-        visible: { 
-            x: 0, 
-            opacity: 1, 
-            transition: { 
-                delay, 
+        visible: {
+            x: 0,
+            opacity: 1,
+            transition: {
+                delay,
                 duration: 0.8,
                 type: "spring",
                 stiffness: 100
-            } 
+            }
         }
     });
 
     const slideInFromRight = (delay: number) => ({
         hidden: { x: 100, opacity: 0 },
-        visible: { 
-            x: 0, 
-            opacity: 1, 
-            transition: { 
-                delay, 
+        visible: {
+            x: 0,
+            opacity: 1,
+            transition: {
+                delay,
                 duration: 0.8,
                 type: "spring",
                 stiffness: 100
-            } 
+            }
         }
     });
 
@@ -422,25 +421,25 @@ export default function WhyChooseVAccel() {
 
             {/* Enhanced Background Elements */}
             <div className="absolute inset-0">
-                <motion.div 
+                <motion.div
                     className="absolute top-1/4 left-1/4 w-40 h-40 sm:w-64 sm:h-64 md:w-96 md:h-96 min-[2560px]:w-[600px] min-[2560px]:h-[600px] bg-purple-500/10 rounded-full blur-3xl"
-                    animate={{ 
+                    animate={{
                         scale: [1, 1.2, 1],
                         opacity: [0.1, 0.2, 0.1]
                     }}
-                    transition={{ 
+                    transition={{
                         duration: 4,
                         repeat: Infinity,
                         ease: "easeInOut"
                     }}
                 />
-                <motion.div 
+                <motion.div
                     className="absolute bottom-1/4 right-1/4 w-40 h-40 sm:w-64 sm:h-64 md:w-96 md:h-96 min-[2560px]:w-[600px] min-[2560px]:h-[600px] bg-cyan-500/10 rounded-full blur-3xl"
-                    animate={{ 
+                    animate={{
                         scale: [1.2, 1, 1.2],
                         opacity: [0.2, 0.1, 0.2]
                     }}
-                    transition={{ 
+                    transition={{
                         duration: 4,
                         repeat: Infinity,
                         ease: "easeInOut",
@@ -455,121 +454,124 @@ export default function WhyChooseVAccel() {
                     <span key={p.id} style={p.style} />
                 ))}
             </div>
-           
-                    
-     <section className="flex flex-col lg:flex-row items-center justify-between gap-12 px-6 py-16 sm:px-12 lg:px-20">
-      {/* Left Text */}
-      <motion.div
-        variants={fadeUpVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.4 }} // 👈 animation only starts when 40% of the div is in view
-        className="flex flex-col gap-6 sm:gap-8 lg:gap-10 w-full lg:w-[60%] max-w-full"
-      >
-        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-black leading-tight">
-          <span className="whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-            Why V-Accel?
-          </span>
-        </h1>
 
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
-          From Concept to Reality —
-        </h2>
 
-        <p className="text-lg sm:text-xl md:text-2xl leading-relaxed">
-          Empowering Ideas with AI & Accelerating Success
-        </p>
-      </motion.div>
-
-      {/* Right Image */}
-      <motion.div
-        variants={fadeUpVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.4 }}
-        className="w-full lg:w-[40%] flex justify-center"
-      >
-        <img
-          src="/work/TeamImg3.png"
-          alt="Why V-Accel"
-          className="w-full max-w-[500px] h-auto object-contain rounded-2xl shadow-lg"
-        />
-      </motion.div>
-    </section>
-                
-            {/* What We Do Section - Left Content, Right Cards */}
-            <SectionWrapper className="z-10 max-w-7xl min-[2560px]:max-w-[2400px] w-full">
-                <motion.section
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
+            <section className="flex flex-col lg:flex-row items-center justify-between  px-6 py-1 sm:px-12 lg:px-20">
+                {/* Left Text */}
+                <motion.div
+                    variants={fadeUpVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.4 }} // 👈 animation only starts when 40% of the div is in view
+                    className="flex flex-col gap-6 sm:gap-8 lg:gap-10 w-full lg:w-[60%] max-w-full"
                 >
-                    <div className="flex flex-col mb-40 min-[2560px]:mb-64 lg:flex-row items-center gap-8 lg:gap-12 min-[2560px]:gap-20">
-                        {/* Left Content */}
-                        <motion.div 
-                            className="flex-1 text-center lg:text-left min-[2560px]:px-8"
-                            initial="hidden"
-                            animate="visible"
-                            variants={slideInFromLeft(0.2)}
-                        >
-                            <motion.h2 
-                                className="font-bold mb-6 min-[2560px]:mb-10 text-transparent bg-clip-text bg-white text-4xl lg:text-5xl min-[2560px]:text-8xl min-[2560px]:leading-[1.1]"
-                                whileInView={{ 
-                                    scale: [1, 1.02, 1],
-                                    transition: { duration: 2, repeat: Infinity }
-                                }}
-                            >
-                                What Makes Our Code<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">&quot;Custom&quot;</span>?
-                            </motion.h2>
-                        </motion.div> 
 
-                        {/* Right Cards */}
-                        <motion.div 
-                            className="flex-1 min-[2560px]:px-8"
-                            initial="hidden"
-                            animate="visible"
-                            variants={slideInFromRight(0.4)}
-                        >
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 min-[2560px]:gap-8">
-                                {highlights.map((item, i) => (
-                                    <motion.div
-                                        key={item.title}
-                                        className={`border ${item.border} rounded-2xl min-[2560px]:rounded-3xl p-6 min-[2560px]:p-10 shadow-xl ${item.shadow} hover:scale-105 hover:shadow-2xl transition-all duration-500 group ${
-                                            i === currentBouncingIndexWhy ? 'bouncing-card' : ''
-                                        }`}
-                                        initial={{ opacity: 0, y: 50, scale: 0.8 }}
-                                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                                        transition={{ 
-                                            delay: 0.6 + (0.15 * i), 
-                                            duration: 0.6,
-                                            type: "spring",
-                                            stiffness: 100
-                                        }}
-                                        whileHover={{
-                                            y: -10,
-                                            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
-                                            transition: { duration: 0.2 }
-                                        }}
-                                    >
-                                        <motion.div 
-                                            className="text-4xl min-[2560px]:text-6xl mb-4 min-[2560px]:mb-6 group-hover:animate-pulse"
-                                            whileHover={{ scale: 1.2, rotate: 10 }}
+                    <h1
+                        className="text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-black leading-tight text-left"
+                    >
+                        <span className="whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+                            Why V-Accel?
+                        </span>
+                    </h1>
+
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
+                        From Concept to Reality —
+                    </h2>
+
+                    <p className="text-lg sm:text-xl md:text-2xl leading-relaxed">
+                        Empowering Ideas with AI & Accelerating Success
+                    </p>
+                </motion.div>
+
+                {/* Right Image */}
+                <motion.div
+                    variants={fadeUpVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.4 }}
+                    className="w-full lg:w-[40%] flex justify-center "
+                >
+                    <img
+                        src="/work/TeamImg3.png"
+                        alt="Why V-Accel"
+                        className="w-full max-w-[500px]  h-auto object-contain rounded-2xl shadow-lg"
+                    />
+                </motion.div>
+            </section>
+            <section>
+                {/* What We Do Section - Left Content, Right Cards */}
+                <SectionWrapper className="z-10 max-w-7xl min-[2560px]:max-w-[2400px] w-full">
+                    <motion.section
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1 }}
+                    >
+                        <div className="flex flex-col mb-40 min-[2560px]:mb-64 lg:flex-row items-center gap-8 lg:gap-12 min-[2560px]:gap-20">
+                            {/* Left Content */}
+                            <motion.div
+                                className="flex-1 text-center lg:text-left min-[2560px]:px-8"
+                                initial="hidden"
+                                animate="visible"
+                                variants={slideInFromLeft(0.2)}
+                            >
+                                <motion.h2
+                                    className="font-bold mb-6 min-[2560px]:mb-10 text-transparent bg-clip-text bg-white text-4xl lg:text-5xl min-[2560px]:text-8xl min-[2560px]:leading-[1.1]"
+                                    whileInView={{
+                                        scale: [1, 1.02, 1],
+                                        transition: { duration: 2, repeat: Infinity }
+                                    }}
+                                >
+                                    What Makes Our Code<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">&quot;Custom&quot;</span>?
+                                </motion.h2>
+                            </motion.div>
+
+                            {/* Right Cards */}
+                            <motion.div
+                                className="flex-1 min-[2560px]:px-8"
+                                initial="hidden"
+                                animate="visible"
+                                variants={slideInFromRight(0.4)}
+                            >
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 min-[2560px]:gap-8">
+                                    {highlights.map((item, i) => (
+                                        <motion.div
+                                            key={item.title}
+                                            className={`border ${item.border} rounded-2xl min-[2560px]:rounded-3xl p-6 min-[2560px]:p-10 shadow-xl ${item.shadow} hover:scale-105 hover:shadow-2xl transition-all duration-500 group ${i === currentBouncingIndexWhy ? 'bouncing-card' : ''
+                                                }`}
+                                            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+                                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                                            transition={{
+                                                delay: 0.6 + (0.15 * i),
+                                                duration: 0.6,
+                                                type: "spring",
+                                                stiffness: 100
+                                            }}
+                                            whileHover={{
+                                                y: -10,
+                                                boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+                                                transition: { duration: 0.2 }
+                                            }}
                                         >
-                                            {item.icon}
+                                            <motion.div
+                                                className="text-4xl min-[2560px]:text-6xl mb-4 min-[2560px]:mb-6 group-hover:animate-pulse"
+                                                whileHover={{ scale: 1.2, rotate: 10 }}
+                                            >
+                                                {item.icon}
+                                            </motion.div>
+                                            <h3 className="text-lg min-[2560px]:text-2xl font-bold mb-3 min-[2560px]:mb-5 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-300 transition-all duration-300">
+                                                {item.title}
+                                            </h3>
+                                            <p className="text-white/80 text-sm min-[2560px]:text-lg leading-relaxed group-hover:text-white transition-colors duration-300">
+                                                {item.description}
+                                            </p>
                                         </motion.div>
-                                        <h3 className="text-lg min-[2560px]:text-2xl font-bold mb-3 min-[2560px]:mb-5 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-300 transition-all duration-300">
-                                            {item.title}
-                                        </h3>
-                                        <p className="text-white/80 text-sm min-[2560px]:text-lg leading-relaxed group-hover:text-white transition-colors duration-300">
-                                            {item.description}
-                                        </p>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </motion.div>
-                    </div>
-                </motion.section>
-            </SectionWrapper>
+                                    ))}
+                                </div>
+                            </motion.div>
+                        </div>
+                    </motion.section>
+                </SectionWrapper>
+            </section>
         </main>
     );
 }
