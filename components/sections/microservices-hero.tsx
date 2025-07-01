@@ -1,4 +1,4 @@
-import { MicroservicesContent } from "../sub/microservices-content";
+import { MicroservicesContent } from "../sub/microservices-content.";
 
 export const MicroservicesHero = () => {
   return (

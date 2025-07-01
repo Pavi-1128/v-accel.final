@@ -7,9 +7,13 @@ import { usePathname } from "next/navigation";
 import { NAV_LINKS, SOCIALS } from "@/constants";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
-export const Navbar = () => {
+interface NavbarProps {
+  isExpanded: boolean;
+  setIsExpanded: (expanded: boolean) => void;
+}
+
+export const Navbar = ({ isExpanded, setIsExpanded }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // mobile
-  const [isExpanded, setIsExpanded] = useState(false); // desktop
   const pathname = usePathname();
   const sidebarRef = useRef<HTMLDivElement | null>(null);
 
@@ -27,14 +31,14 @@ export const Navbar = () => {
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [isExpanded]);
+  }, [isExpanded, setIsExpanded]);
 
   return (
     <>
       {/* Desktop Sidebar */}
       <div
         ref={sidebarRef}
-        className={`hidden lg:flex fixed top-0 left-0 z-50 h-screen bg-transparent shadow-lg flex-col items-center py-6 px-2 transition-all duration-300
+        className={` bg-transparent hidden lg:flex fixed top-0 left-0 z-50 h-screen bg-transparent shadow-lg flex-col items-center py-6 px-2 transition-all duration-300
         ${isExpanded ? "w-48 min-[2560px]:w-80" : "w-[90px] min-[2560px]:w-[120px]"}`}
       >
         {/* Logo */}
@@ -54,26 +58,33 @@ export const Navbar = () => {
         </Link>
 
         {/* Nav Links */}
-        <div className="flex-1 w-full flex flex-col items-center gap-2">
+        <div className="flex-1 w-full flex flex-col items-center gap-2 px-1 py-6">
           {NAV_LINKS.map((link) => {
             const isActive = pathname === link.link;
             const Icon = link.icon;
+
             return (
               <Link
                 key={link.title}
                 href={link.link}
-                className={`flex items-center w-full px-3 py-2 rounded-lg font-medium text-base transition-all ${
-                  isActive
-                    ? " hover:scale-105 transition-transform duration-200 inline-block button-primary"
-                    : "text-gray-300"
-                      
-                }`}
-              >
-                <Icon className="w-5 h-5 mr-3" />
-                <span
-                  className={`transition-all duration-300 ${
-                    isExpanded ? "opacity-100" : "opacity-0 w-0 overflow-hidden"
+                className={`group flex items-center transition-all duration-200 rounded-lg font-medium text-sm ${isExpanded
+                  ? `w-full px-3 py-2 ${isActive
+                    ? "button-primary scale-105"
+                    : "hover:bg-gray-800"
+                  }`
+                  : `p-2 ${isActive ? "button-primary scale-105" : ""}`
                   }`}
+              >
+                <div className="flex items-center justify-center">
+                  <Icon
+                    className={`w-5 h-5 text-gray-300 group-hover:text-violet-900 transition-colors duration-200 ${isExpanded ? "mr-3" : ""
+                      }`}
+                  />
+                </div>
+
+                <span
+                  className={`transition-all duration-300 text-white ${isExpanded ? "opacity-100" : "opacity-0 w-0 overflow-hidden"
+                    }`}
                 >
                   {link.title}
                 </span>
@@ -82,35 +93,41 @@ export const Navbar = () => {
           })}
         </div>
 
+
         {/* Expand/Collapse Button */}
+
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className={`mt-4 mb-2 text-white  hover:scale-105 transition-transform duration-200 inline-block button-primary  rounded-full w-9 h-9 flex items-center justify-center ${
-            isExpanded ? "self-end mr-2" : "self-center"
-          }`}
+          className={`mt-2 mb-2 text-white hover:scale-105 transition-transform duration-200 inline-block button-primary rounded-full w-9 h-9 flex items-center justify-center ${isExpanded ? "self-end mr-2" : "self-center"
+            }`}
         >
           {isExpanded ? <FaChevronLeft /> : <FaChevronRight />}
         </button>
 
+
         {/* Social Icons */}
-        <div className="flex flex-col gap-4 items-center mt-auto">
+
+        <div className="flex-1 w-full flex flex-col items-center gap-2 pl-3">
           {SOCIALS.map(({ link, name, icon: Icon }) => (
             <Link
               key={name}
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className={` rounded-full flex items-center w-full px-3 py-2 rounded-lg font-medium text-base transition-all ${
-                isExpanded
-                  ? "w-full px-3 py-2 justify-start  hover:scale-105 transition-transform duration-200 inline-block button-primary"
-                  : "w-10 h-10 justify-center text-gray-300"
-              }`}
+              className={`group flex items-center w-full px-3 py-2 rounded-lg font-medium text-base transition-all${isExpanded
+                  ? " hover:scale-105 transition-transform duration-200 inline-block button-primary"
+                  : " text-gray-300"
+                }`}
             >
-              <Icon className="text-white w-5 h-5" />
-              {isExpanded && <span className="ml-2 text-white text-sm">{name}</span>}
+              <Icon className="w-5 h-5 text-white group-hover:text-violet-500 transition-colors duration-200" />
+              {isExpanded && (
+                <span className="ml-2 text-white text-sm">{name}</span>
+              )}
             </Link>
           ))}
         </div>
+
+
       </div>
 
       {/* Mobile Top Navbar */}
@@ -135,7 +152,7 @@ export const Navbar = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-white text-2xl ml-4"
           >
-            {isMenuOpen ? "✕" : "☰"}
+            {isMenuOpen ? "\u2715" : "\u2630"}
           </button>
         </div>
       </nav>
@@ -152,11 +169,10 @@ export const Navbar = () => {
                 <Link
                   key={link.title}
                   href={link.link}
-                  className={`flex items-center gap-3 px-4 py-3 rounded-lg w-full text-lg font-medium transition ${
-                    isActive
-                      ? "hover:scale-105 transition-transform duration-200 inline-block button-primary"
-                      : "text-gray-300 hover:bg-[rgba(112,66,248,0.1)] hover:text-[rgb(112,66,248)]"
-                  }`}
+                  className={`flex items-center gap-3 px-4 py-3 rounded-lg w-full text-lg font-medium transition ${isActive
+                    ? "hover:scale-105 transition-transform duration-200 inline-block button-primary"
+                    : "text-gray-300 hover:bg-[rgba(112,66,248,0.1)] hover:text-[rgb(112,66,248)]"
+                    }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <Icon className="w-5 h-5" />
