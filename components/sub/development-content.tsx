@@ -41,7 +41,7 @@ export const DevelopmentContent = () => {
                  min-[2560px]:max-w-[2400px] min-[2560px]:mx-auto"
     >
       {/* Content section - appears first on mobile */}
-      <div className="w-full lg:w-1/2 flex flex-col gap-6 min-[2560px]:gap-10 justify-center text-center lg:text-left order-1 lg:order-2">
+      <div className="w-full lg:w-1/2 flex flex-col gap-6 min-[2560px]:gap-10 justify-center text-center lg:text-left order-1 lg:order-2 pl-4">
 
         <motion.div
           variants={slideInFromLeft(0.5)}
@@ -116,7 +116,7 @@ export const DevelopmentContent = () => {
         className="w-full lg:w-1/2 flex justify-center items-center order-2 lg:order-1 mt-10 lg:mt-0"
       >
         <div className="grid grid-cols-2 gap-4 sm:gap-5 min-[2560px]:gap-8 
-                        max-w-[280px] sm:max-w-[400px] md:max-w-[500px] min-[2560px]:max-w-[700px] w-full">
+                        max-w-[280px] sm:max-w-[400px] md:max-w-[500px] min-[2560px]:max-w-[700px] w-full pr-10">
           {stacks.map((stack, i) => (
             <motion.div
               key={stack.title}

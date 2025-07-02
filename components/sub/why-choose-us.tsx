@@ -101,10 +101,6 @@ export const WhyChooseUs = () => {
           </div>
         </motion.div>
 
-
-        
-        
-
         {/* Circular Cards */}
         <div className="absolute inset-0">
           {reasons.map((reason, i) => {
@@ -130,7 +126,7 @@ export const WhyChooseUs = () => {
                   transform: 'translate(-50%, -50%)',
                 }}
               >
-                <div className="bg-white/10 backdrop-blur-lg border border-white/10 rounded-xl p-6 shadow-xl hover:bg-gradient-to-br hover:from-purple-500/20 hover:to-cyan-500/20 hover:border-purple-500/30 hover:shadow-purple-500/20 transition-all duration-300">
+                <div className="bg-white/10 backdrop-blur-lg border h-40 border-white/10 rounded-xl p-6 shadow-xl hover:bg-gradient-to-br hover:from-purple-500/20 hover:to-cyan-500/20 hover:border-purple-500/30 hover:shadow-purple-500/20 transition-all duration-300">
                   <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mb-3">
                     {reason.title}
                   </h3>

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import ContactPopup from "@/components/main/contactpopup";
+import ContactPopup from "@/components/main/ContactPopup";
 
 import {
   slideInFromLeft,

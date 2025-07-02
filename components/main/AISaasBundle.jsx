@@ -391,7 +391,7 @@ const AISaasBundle = () => {
                                         >
                                             {bundles.map((bundle, index) => (
                                                 <motion.div
-                                                    key={bundle.slug}
+                                                    key={`${category}-${bundle.name}-${bundle.slug}-${index}`}
                                                     variants={cardVariants}
                                                     custom={index}
                                                     whileHover={{ 

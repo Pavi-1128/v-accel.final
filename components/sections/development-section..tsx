@@ -52,11 +52,11 @@ export default function DevelopmentSection() {
   return (
     <section className="relative w-full min-h-[700px] flex flex-col justify-center items-center overflow-hidden py-24 px-4 bg-gradient-to-b from-yellow-400 to-yellow-300">
       {/* SVG Mountain background */}
-      <div className="absolute inset-0 w-full h-full pointer-events-none select-none z-0">
+      {/* <div className="absolute inset-0 w-full h-full pointer-events-none select-none z-0">
         <svg viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full object-cover">
           <path fill="#222" fillOpacity="1" d="M0,256L80,229.3C160,203,320,149,480,154.7C640,160,800,224,960,229.3C1120,235,1280,181,1360,154.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z" />
         </svg>
-      </div>
+      </div> */}
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center w-full max-w-6xl">
         <motion.h2
@@ -78,7 +78,7 @@ export default function DevelopmentSection() {
           Revolutionize Your Operations: Transform with Software Tailored to Your Needs.
         </motion.p>
         {/* Cards */}
-        <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full justify-center">
+        <div className="relative z-10  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full justify-center">
           {stacks.map((stack, i) => (
             <motion.div
               key={stack.title}
